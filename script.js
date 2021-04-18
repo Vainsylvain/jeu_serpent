@@ -132,6 +132,8 @@ window.onload = function()
 
     function gameOver()
     {
+        var audio = new Audio('explosion.wav');
+        audio.play();
         contexte.save();
         contexte.font = "60px serif"; 
         contexte.fillText("Game Over", canvasWidth/2-canvasWidth/7, canvasHeight/5.6);
@@ -324,6 +326,8 @@ window.onload = function()
             var head = this.body[0];
             if(head[0] === pommeAManger.position[0] && head[1] === pommeAManger.position[1])
                 {
+                    var audio = new Audio('pomme.mp3');
+                    audio.play();
                     nombrePommeMange ++;
                     if(compteurOn === true)
                     {
